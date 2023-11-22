@@ -7,26 +7,26 @@
     <title>Cadastro</title>
     <link rel="stylesheet" href="../styles/register.css">
     
-    
+    <script src="../scripts/scripts.js" defer></script>
 </head>
 <body>
     <div class="page">
-        <form method="POST" class="formLogin">
+        <form method="POST" class="formLogin" id="conteinerForm">
             <h1>Cadastro</h1>
             <p>Digite os seus dados de acesso no campo abaixo.</p>
 
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" id="emailRegister"/>
 
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" />
+            <input type="password" placeholder="Digite sua senha" id="passwordRegister"/>
 
-            <label for="comfirmpassword">Confirme sua senha</label>
-            <input type="password" placeholder="Digite sua senha" />
+            <label for="confirmpasswordRegister">Confirme sua senha</label>
+            <input type="password" placeholder="Digite sua senha" id="confirmpasswordRegister"/>
 
             <span class="span">Tem uma conta? </span>
             <a href="./login.html">Conecte-se agora</a>
-            <input type="submit" value="Acessar" class="btn" />
+            <input type="submit" value="Acessar" class="btn" id="btnRegisterUser"/>
         </form>
     </div>
     
