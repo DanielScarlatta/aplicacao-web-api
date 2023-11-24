@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../styles/login.css">
-    
+    <script src="../scripts/login.js"></script>
 </head>
 <body>
     <div class="page">
@@ -15,16 +15,16 @@
             <p>Digite os seus dados para o acesso nos campos abaixo.</p>
 
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" />
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" id="emailRegister"/>
 
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" />
+            <input type="password" placeholder="Digite sua senha" id="passwordRegister"/>
 
             <a href="./password.html">Esqueci minha senha</a>
 
             <span class="span">Não uma conta? </span>
             <a href="./register.html">Cadastrar-se</a>
-            <input type="submit" value="Acessar" class="btn" />
+            <input type="submit" value="Acessar" class="btn" id="btnAccessUser" />
         </form>
     </div>
     

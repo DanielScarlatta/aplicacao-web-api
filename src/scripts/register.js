@@ -1,6 +1,5 @@
 
-const url = "18.231.124.162:4000"
-console.log(url)
+const url = "http://18.231.124.162:4000"
 
 const nameRegister = document.getElementById('nameRegister')
 const emailRegister = document.getElementById('emailRegister')
@@ -20,20 +19,8 @@ conteinerForm.addEventListener('submit', (ev) => {
   }
 
   dataUser = JSON.stringify(dataUser);
-  hello()
   registerUser(dataUser)
 })
-
-
-async function hello() {
-  const response = await fetch(`${url}/v1/hello`);
-
-  console.log(response)
-
-  const data = await response.json()
-
-  console.log(data)
-}
 
 async function registerUser(dataUser) {
   const response = await fetch(`${url}/v1/auth/register`, {
