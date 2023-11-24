@@ -1,5 +1,6 @@
-require('dotenv').config()
-const url = process.env.URL
+
+const url = "18.231.124.162:4000"
+console.log(url)
 
 const nameRegister = document.getElementById('nameRegister')
 const emailRegister = document.getElementById('emailRegister')
@@ -19,13 +20,13 @@ conteinerForm.addEventListener('submit', (ev) => {
   }
 
   dataUser = JSON.stringify(dataUser);
-
+  hello()
   registerUser(dataUser)
 })
 
 
 async function hello() {
-  const response = await fetch(url + "/v1/hello");
+  const response = await fetch(`${url}/v1/hello`);
 
   console.log(response)
 
