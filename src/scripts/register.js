@@ -1,4 +1,3 @@
-
 const url = "http://18.231.124.162:4000"
 
 const nameRegister = document.getElementById('nameRegister')
@@ -7,7 +6,7 @@ const passwordRegister = document.getElementById('passwordRegister')
 const confirmPasswordRegister = document.getElementById('confirmpasswordRegister')
 const btnRegisterUser = document.getElementById('btnRegisterUser')
 const conteinerForm = document.getElementById('conteinerForm')
-
+const responseApi = document.querySelector("#responseApi")
 
 conteinerForm.addEventListener('submit', (ev) => {
   ev.preventDefault()
@@ -31,9 +30,11 @@ async function registerUser(dataUser) {
     }
   });
 
-  console.log(response)
-
   const data = await response.json()
-
   console.log(data)
+ 
+  if(response.status === 201) {
+    window.location.href = "login.html"
+  }
+ 
 }

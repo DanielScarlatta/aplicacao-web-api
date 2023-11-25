@@ -1,7 +1,6 @@
 const url = "http://18.231.124.162:4000"
 
-const emailLogin = document.getElementById('emailLogin')
-const passwordLogin = document.getElementById('passwordLogin')
+const emailForgot = document.getElementById('emailForgot')
 const btnAccessLogin = document.getElementById('btnAccessLogin')
 const responseApi = document.querySelector("#responseApi")
 const conteinerForm = document.getElementById('conteinerForm')
@@ -9,8 +8,7 @@ const conteinerForm = document.getElementById('conteinerForm')
 conteinerForm.addEventListener('submit', (ev) => {
   ev.preventDefault()
   let dataUser = {
-    email: emailLogin.value,
-    password: passwordLogin.value,
+    email: emailForgot.value,
   }
 
   dataUser = JSON.stringify(dataUser);
@@ -18,7 +16,7 @@ conteinerForm.addEventListener('submit', (ev) => {
 })
 
 async function registerUser(dataUser) {
-  const response = await fetch(`${url}/v1/auth/login`, {
+  const response = await fetch(`${url}/v1/auth/forgot`, {
     method: "POST",
     body: dataUser,
     headers: {
@@ -28,4 +26,7 @@ async function registerUser(dataUser) {
 
   const data = await response.json()
   console.log(data)
+  if(response.status === 200) {
+    window.location.href = "password.html"
+  }
 }

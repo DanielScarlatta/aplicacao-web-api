@@ -6,25 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../styles/login.css">
-    <script src="../scripts/login.js"></script>
+    <script src="../scripts/login.js" defer></script>
 </head>
 <body>
     <div class="page">
-        <form method="POST" class="formLogin">
+        <form method="POST" class="formLogin" id="conteinerForm">
             <h1>Login</h1>
             <p>Digite os seus dados para o acesso nos campos abaixo.</p>
 
             <label for="email">E-mail</label>
-            <input type="email" placeholder="Digite seu e-mail" autofocus="true" id="emailRegister"/>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" id="emailLogin"/>
 
             <label for="password">Senha</label>
-            <input type="password" placeholder="Digite sua senha" id="passwordRegister"/>
+            <input type="password" placeholder="Digite sua senha" id="passwordLogin"/>
 
-            <a href="./password.html">Esqueci minha senha</a>
+            <a href="./forgotPass.html">Esqueci minha senha</a>
 
             <span class="span">Não uma conta? </span>
             <a href="./register.html">Cadastrar-se</a>
-            <input type="submit" value="Acessar" class="btn" id="btnAccessUser" />
+            <input type="submit" value="Acessar" class="btn" id="btnAccessLogin" />
         </form>
     </div>
     

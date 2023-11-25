@@ -4,28 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../styles/login.css">
-    
-    
+    <title>Esqueci minha senha</title>
+    <link rel="stylesheet" href="../styles/password.css">
+    <script src="../scripts/forgotPass.js" defer></script>
 </head>
 <body>
     <div class="page">
-        <form method="POST" class="formLogin">
-            <h1>Login</h1>
-            <p>Digite os seus dados para o acesso nos campos abaixo.</p>
+        <form method="POST" class="formLogin" id="conteinerForm">
+            <h1>Recuperar</h1>
+            <p>Digite o seu email abaixo para realizar a recuperação da sua conta</p>
 
-            <label for="email">Codigo</label>
-            <input type="text" placeholder="Digite o codigo enviado no e-mail" autofocus="true" />
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" autofocus="true" id="emailForgot"/>
 
-            <label for="password">Nova senha</label>
-            <input type="password" placeholder="Digite sua senha" />
-            
-            <label for="password">Confirme a senha</label>
-            <input type="password" placeholder="Confirme sua senha" />
-
-
-            <input type="submit" value="Enviar" class="btn" />
+            <input type="submit" value="Enviar" class="btn" id="forgotBtn"/>
         </form>
     </div>
     
